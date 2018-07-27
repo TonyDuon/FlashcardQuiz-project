@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>FlashcardQuiz Project</title>
+    <meta name="description" content="Project 1 by Tonny Duong">
+    
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="vendors/css/bootstrap.css" />
+    
+    <!--main css file-->
+    <link rel="stylesheet" href="resource/css/main.css" />
+</head>
+<body>
+<!--TODO list:
+1) compelte conversion from asp.net to html css and javascript
+2) get animated.css and wow.js to implement animations
+3) work on reading/writing txt files and other flashcard decks
+4) work on high score implementation
+5)finish up the css design of the program
+
+-->
+    
+    
+    
+    <!------------------------------------------------MAIN MENU START------------------------------------------------------------->
+    <div id="homePage">
+    <div id="myTitleContainer">
+        <h1 id="myTitle" >WELCOME TO MY FLASH CARD PROJECT</h1>
+        <p id="author">By Tonny Duong</p>
+    </div>
+    <button ID="gotoFlashCard" class="btnMainMenu btn btn-success">Review</button> 
+    <button ID="gotoQuiz" class="btnMainMenu btn btn-success">Quiz Me!</button> 
+    <br/><Button ID="importFile"class="btnMainMenu btn btn-success">Load Deck</Button> 
+
+<!--
+    <div id="QuizWindow" class="hideQuiz">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+            <p>AYY LMAO</p>
+          </div>
+    </div>
+-->
+    <!----------------------------------------LOAD DECK START-------------------------------------->
+    <form>
+        <div id="loadDeckmenu">
+            <input type="radio" name="loadDeck" Value="0">Programming Definition and Concepts <br>
+            <input type="radio" name="loadDeck" Value="1">Video Game <br>
+            <input type="radio" name="loadDeck" Value="2">Interview Questions <br>
+            <input type="radio" name="loadDeck" Value="3">Movies <br>
+        </div>
+    </form>
+    <!----------------------------------------LOAD DECK END---------------------------------------->
+    </div>
+    <!------------------------------------------------MAIN MENU END--------------------------------------------------------------->
+    <!------------------------------------------------FLASHCARD START------------------------------------------------------------->
+    <div id="flashCardMenu" visible="false">
+        <h1><label ID="questionLabel" class="questionCard label-success label"/>Press Generate to Begin</h1> <br />
+        <h2><label ID="answerLabel" class="label label-warning col-md-12"/>Wrong button!</h2><br />
+        <button ID="showHideButton" class="btn btn-warning">Show\Hide Answer</button>  
+        <button ID="generateButton" class="btn btn-success">Generate</button>         
+        <button ID="homeButton" class="btn btn-primary">Home</button>     
+    </div>
+    <!------------------------------------------------FLASHCARD END--------------------------------------------------------------->
+    <!------------------------------------------------QUIZ START------------------------------------------------------------------>
+
+    <div id="quizMenu" visible="false">
+<!--            <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>-->
+        <h2><asp:Label ID="tmrlblQuiz" Text="Timer" class="label label-danger"></asp:Label></h2>
+
+
+        <h1><label ID="lblQuestion" class="questionCard label-success label">Press Start to Begin</label></h1> <br /><br />
+        
+        <div id="quizAnswerContainer">
+            <div ID="rblAnswers" Visible="true" >
+                <input type="radio" name="userAnswer" Value="0">a1<br>
+                <input type="radio" name="userAnswer" Value="1">a2<br>
+                <input type="radio" name="userAnswer" Value="2">a3<br>
+                <input type="radio" name="userAnswer" Value="3">a4<br>
+            </div>
+            <button ID="btnSubmitAnswer" class="btn btn-success">Start</button> 
+        </div>
+
+        <button ID="homeButton2" class="btn btn-primary">Home</button>   
+    </div>
+
+    <!------------------------------------------------QUIZ END-------------------------------------------------------------------->
+    
+    
+    <!--JAVASCRIPT SECTION-->
+    <script src="vendors/script/jquery-1.9.1.min.js"></script>
+    <script src="resource/script/myJS.js"></script>
+</body>
+</html>
+

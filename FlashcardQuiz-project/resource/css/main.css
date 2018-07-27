@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    background-image: url("/resource/img/bckgroun.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#myTitleContainer {
+    background-image: url("/resource/img/TitleFlashCard.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-wrap: normal;
+    width: 600px;
+    height: 400px;
+    position: center;
+    /*padding:130px 90px 60px 0px;*/
+    /*margin: 0px;
+    left: 33vw;*/
+}
+
+#myTitle {
+    position: relative;
+    top: 200px;
+    left: 145px;
+    width: 330px;
+}
+
+#author {
+    position: relative;
+    left: 150px;
+    top: 200px;
+}
+
+.questionCard {
+    /*background-image: url("content/questionFlashCard.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*padding: 200px;*/
+}
+
+#flashCardMenu, #quizMenu, #loadDeckmenu{
+    display: none;
+}
+
+#homePage {
+    display: inline-block;
+}
+
+.btnMainMenu {
+    margin: 1vh 0px;
+    padding: 10px 10px;
+}
+
+#rblAnswers, #myDeck {
+    text-align: center;
+    width: 100%;
+}
+
+#answerLabel {
+    white-space: pre-wrap;
+    height: 20vh;
+    width: 500px;
+}
