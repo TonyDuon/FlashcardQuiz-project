@@ -58,7 +58,9 @@
     <!------------------------------------------------FLASHCARD START------------------------------------------------------------->
     <div id="flashCardMenu" visible="false">
         <h1><label ID="questionLabel" class="questionCard label-success label"/>Press Generate to Begin</h1> <br />
-        <h2><label ID="answerLabel" class="label label-warning col-md-12"/>Wrong button!</h2><br />
+        <h2><label ID="answerLabel" class="label label-warning col-md-12"/>Wrong button!</h2>
+        <br>
+        <br>
         <button ID="showHideButton" class="btn btn-warning">Show\Hide Answer</button>  
         <button ID="generateButton" class="btn btn-success">Generate</button>         
         <button ID="homeButton" class="btn btn-primary">Home</button>     
@@ -75,10 +77,10 @@
         
         <div id="quizAnswerContainer">
             <div ID="rblAnswers" Visible="true" >
-                <input type="radio" name="userAnswer" Value="0">a1<br>
-                <input type="radio" name="userAnswer" Value="1">a2<br>
-                <input type="radio" name="userAnswer" Value="2">a3<br>
-                <input type="radio" name="userAnswer" Value="3">a4<br>
+                <input type="radio" name="userAnswer" Value="0"><label id="a1"></label><br>
+                <input type="radio" name="userAnswer" Value="1"><label id="a2"></label><br>
+                <input type="radio" name="userAnswer" Value="2"><label id="a3"></label><br>
+                <input type="radio" name="userAnswer" Value="3"><label id="a4"></label><br>
             </div>
             <button ID="btnSubmitAnswer" class="btn btn-success">Start</button> 
         </div>

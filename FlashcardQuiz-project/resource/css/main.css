@@ -55,7 +55,7 @@ body {
     width: 100%;
 }
 
-#answerLabel {
+#answerLabel, #questionLabel {
     white-space: pre-wrap;
     height: 20vh;
     width: 500px;

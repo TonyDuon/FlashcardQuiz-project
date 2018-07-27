@@ -44,13 +44,15 @@ document.getElementById("importFile").addEventListener('click', function(){
 document.getElementById("gotoFlashCard").addEventListener('click', function(){
     document.getElementById("homePage").style.display= "none";
     document.getElementById("flashCardMenu").style.display= "inline-block";
-    document.getElementById("answerLabel").style.display= "none";
+    flashcardAnswer.visibility = "hidden"; 
     
 });
 
 document.getElementById("gotoQuiz").addEventListener('click', function(){
     document.getElementById("homePage").style.display= "none";
     document.getElementById("quizMenu").style.display= "inline-block";
+    
+    document.getElementById("rblAnswers").style.visibility = "hidden"; 
     
 });
 
@@ -71,18 +73,19 @@ function gotoHome(id){
 
 
 var flashcardAnswer = document.getElementById("answerLabel").style;
+flashcardAnswer.visibility = "hidden";
 document.getElementById("showHideButton").addEventListener('click', function(){
     
-    if(flashcardAnswer.display == "inline-block")
+    if(flashcardAnswer.visibility == "visible")
     {
-          flashcardAnswer.display = "none";  
+          flashcardAnswer.visibility = "hidden";  
     }else{
-          flashcardAnswer.display = "inline-block";
+          flashcardAnswer.visibility = "visible";
     }
 });
 
 document.getElementById("generateButton").addEventListener('click', function(){
-    flashcardAnswer.display = "none";
+    flashcardAnswer.visibility = "hidden"; 
     var ID = generateID();
     
     document.getElementById("questionLabel").innerHTML = qaDatabase[ID].question;
@@ -95,11 +98,72 @@ var previousID = -1;
 function generateID(){
     var ID = -1;
     do{
-        ID = Math.floor(Math.random()*qaDatabase.length);}
-    while(ID == previousID)
+        ID = Math.floor(Math.random()*qaDatabase.length);
+    }while(ID == previousID)
     previousID = ID;
     return ID;
     
 }
 
+document.getElementById("btnSubmitAnswer").addEventListener('click', function(){
+    var state = document.getElementById("btnSubmitAnswer");
+    
+    if(state.innerHTML==="Start")
+    {
+        state.innerHTML = "Submit";
+        //show radiobutton list of answers
+        document.getElementById("rblAnswers").style.visibility = "visible"; 
+        //start timer
+//        https://www.w3schools.com/js/js_timing.asp
+        
+        
+        
+    }else{
+//        state.innerHTML = "Start";
+        //check answer
+        
+        //update score
+        
+        //clear radiobutton list selection
+        document.getElementsByName("userAnswer").forEach(function(item){
+         item.checked = false;
+        });
+    }
+    
+    //generate new question and answer
+    generateQuizQuestion()
+});
+
+
+function generateQuizQuestion(){
+    var ID = generateID();
+    document.getElementById("lblQuestion").innerHTML= qaDatabase[ID].question;
+    
+    var id0 = generateOtherID(ID, -1, -1, -1);
+    var id1 = generateOtherID(ID, id0, -1, -1);
+    var id2 = generateOtherID(ID, id0, id1, -1);
+    var id3 = generateOtherID(ID, id0, id1, id2);
+    
+    
+    document.getElementById("a1").innerHTML = qaDatabase[id0].answer;
+    document.getElementById("a2").innerHTML = qaDatabase[id1].answer;
+    document.getElementById("a3").innerHTML = qaDatabase[id2].answer;
+    document.getElementById("a4").innerHTML = qaDatabase[id3].answer;
+}
+
+
+
+function generateOtherID(notThisOne, orThisOne, norThisOne, andThisToo){
+    var otherID = -1;
+    
+    do{
+        otherID = Math.floor(Math.random()*qaDatabase.length);
+    }while(otherID == notThisOne ||
+          otherID == orThisOne ||
+          otherID == norThisOne ||
+          otherID == andThisToo);
+    
+    return otherID;
+    
+}
 
