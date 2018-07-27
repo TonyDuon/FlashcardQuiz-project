@@ -122,6 +122,7 @@ document.getElementById("btnSubmitAnswer").addEventListener('click', function(){
 //        state.innerHTML = "Start";
         //check answer
         
+        
         //update score
         
         //clear radiobutton list selection
@@ -134,15 +135,15 @@ document.getElementById("btnSubmitAnswer").addEventListener('click', function(){
     generateQuizQuestion()
 });
 
-
+var answerID = -1;
 function generateQuizQuestion(){
-    var ID = generateID();
+    answerID = generateID();
     document.getElementById("lblQuestion").innerHTML= qaDatabase[ID].question;
     
-    var id0 = generateOtherID(ID, -1, -1, -1);
-    var id1 = generateOtherID(ID, id0, -1, -1);
-    var id2 = generateOtherID(ID, id0, id1, -1);
-    var id3 = generateOtherID(ID, id0, id1, id2);
+    var id0 = generateOtherID(answerID, -1, -1, -1);
+    var id1 = generateOtherID(answerID, id0, -1, -1);
+    var id2 = generateOtherID(answerID, id0, id1, -1);
+    var id3 = generateOtherID(answerID, id0, id1, id2);
     
     
     document.getElementById("a1").innerHTML = qaDatabase[id0].answer;
