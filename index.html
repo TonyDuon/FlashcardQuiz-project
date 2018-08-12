@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>FlashcardQuiz Project</title>
+    <meta name="description" content="Project 1 by Tonny Duong">
+    
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="vendors/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/css/animate.css" />
+    
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+    
+    
+    <!--main css file-->
+    <link rel="stylesheet" href="resource/css/main.css" />
+</head>
+<body>
+<!--TODO list:
+1) compelte conversion from asp.net to html css and javascript
+2) get animated.css and wow.js to implement animations
+3) work on reading/writing txt files and other flashcard decks
+4) work on high score implementation
+5)finish up the css design of the program
+
+-->
+    
+    
+    
+    <!------------------------------------------------MAIN MENU START------------------------------------------------------------->
+    <div id="homePage" class="inline-block">
+    <div id="myTitleContainer" class="wow animated zoomIn">
+        <h1 id="myTitle" >WELCOME TO MY FLASH CARD PROJECT</h1>
+        <p id="author">By Tonny Duong</p>
+    </div>
+    <button ID="gotoFlashCard" class="btnMainMenu btn btn-success wow animated fadeInLeft">Review</button> 
+    <button ID="gotoQuiz" class="btnMainMenu btn btn-success wow animated fadeInRight">Quiz Me!</button> 
+    <br/><Button ID="importFile"class="btnMainMenu btn btn-primary wow animated fadeInUp">Load Deck</Button> 
+
+<!--
+    <div id="QuizWindow" class="hideQuiz">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+            <p>AYY LMAO</p>
+          </div>
+    </div>
+-->
+    <!----------------------------------------LOAD DECK START-------------------------------------->
+
+    <form>
+        <h3><div id="loadDeckmenu" class="label label-primary startHidden" style="text-align: left;" >
+            <input type="radio" name="loadDeck" class="loadDeck" Value="0" checked="true" >Programming Definition and Concepts <br>
+            <input type="radio" name="loadDeck" class="loadDeck" Value="1">Video Game Trivia<br>
+<!--            <input type="radio" name="loadDeck" Value="2">Interview Questions <br>-->
+<!--            <input type="radio" name="loadDeck" Value="3">Movies <br>-->
+        </div>
+        </h3>
+    </form>
+    <!----------------------------------------LOAD DECK END---------------------------------------->
+    </div>
+    <!------------------------------------------------MAIN MENU END--------------------------------------------------------------->
+    <!------------------------------------------------FLASHCARD START------------------------------------------------------------->
+    <div id="flashCardMenu" class="inline-block startHidden">
+        <h1><label ID="questionLabel" class="flashCard  label-success label"/> <br> Press Generate to Begin</h1> <br />
+        <h2><label ID="answerLabel" class="flashCard label label-warning" /> <br> Wrong button!</h2>
+        <br>
+        <br>
+        <button ID="showHideButton" class="btn btn-warning">Show\Hide Answer</button>  
+        <button ID="generateButton" class="btn btn-success">Generate</button>         
+        <button ID="homeButton" class="btn btn-primary">Home</button>     
+    </div>
+    <!------------------------------------------------FLASHCARD END--------------------------------------------------------------->
+    <!------------------------------------------------QUIZ START------------------------------------------------------------------>
+
+    <div id="quizMenu" class="inline-block startHidden">
+        <div>
+            <h2>
+                <label id="Score" class="label label-warning">Score: 0</label>
+                <label id="Timer1" class="label label-danger">Timer: 60:0 </label>  
+            </h2>
+        </div>
+<!--            <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>-->
+<!--        <asp:Label ID="tmrlblQuiz" Text="Timer" class="label label-danger"></asp:Label>-->
+
+
+        <h1><label ID="lblQuestion" class="flashCard label-success label"><br>Press Start to Begin</label></h1> <br />
+        
+        <div id="quizAnswerContainer">
+            <div ID="rblAnswers" class = "flashcard panel panel-warning">
+                <input type="radio" name="userAnswer" Value="0" id="a1r" class="ansr"><label id="a1" class="ans"></label><br>
+                <input type="radio" name="userAnswer" Value="1" id="a2r" class="ansr"><label id="a2" class="ans"></label><br>
+                <input type="radio" name="userAnswer" Value="2" id="a3r" class="ansr"><label id="a3" class="ans"></label><br>
+                <input type="radio" name="userAnswer" Value="3" id="a4r" class="ansr"><label id="a4" class="ans"></label><br>
+            </div>
+            <button ID="btnSubmitAnswer" class="btn btn-success">Start</button> 
+            <button ID="homeButton2" class="btn btn-primary">Home</button>
+        </div>
+
+           
+    </div>
+
+    <!------------------------------------------------QUIZ END-------------------------------------------------------------------->
+    
+    
+    <!--JAVASCRIPT SECTION-->
+    <script src="vendors/script/jquery-1.9.1.min.js"></script>
+    <script src="vendors/script/wow.js"></script>
+    <script src="vendors/script/easytimer.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    
+    <!--JAVASCRIPT SECTION-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="resource/script/myJS.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+{
+    "programming": [
+        {
+            "question": "What is an Alogrithm?",
+            "answer": "A set of ordered and finite steps used to solve a given problem",
+        },
+        {
+            "question": "Define AJAX",
+            "answer": "Used to retrieve and process information without needing to reload the browser",
+            "otherInfo": "Asynchronous Javascript And XML"
+        },
+        {
+            "question": "Define JSON",
+            "answer": "Used to convert any javascript object into text and vice versa, allowing communication between browser and server",
+            "otherInfo":"JavaScript Object Notation"
+        },
+        {
+            "question": "Define the DOM in HTML/CSS",
+            "answer": "Defines the logical structure of documents and the way a document is accessed and manipulated",
+            "otherInfo":"Document Object Model"
+        },
+        {
+            "question": "Define ASP.Net",
+            "answer": "A program which allow you to create dynamic website using the .Net framework",
+            "otherInfo":"Active Server Page"
+        },
+        {
+            "question": "Describe the function of the HTML, CSS and Javascript in front end programming",
+            "answer": "Adds content to the website, styles the content and adds functionality to the content"
+        },
+        {
+            "question": "Define Progressive Enchancement",
+            "answer": "Layering technologies sequentially so that they work without reliance upon each other"
+        },
+        {
+            "question": "Define a variable",
+            "answer": "Stores information in a memory address to be referenced and manipulated in a computer program",
+            "otherInfo":""
+        }        
+    ],
+    "default": {
+            "question": "",
+            "answer": "",
+            "otherInfo":""
+        }
+}

@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-image: url("../img/bckgroun.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+#myTitleContainer {
+    background-image: url("../img/TitleFlashCard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-wrap: normal;
+    width: 600px;
+    height: 400px;
+    position: center;
+    font-family: 'Permanent Marker', cursive;
+    /*padding:130px 90px 60px 0px;*/
+    /*margin: 0px;
+    left: 33vw;*/
+}
+
+#myTitle {
+    position: relative;
+    top: 180px;
+    left: 160px;
+    width: 330px;
+}
+
+#author {
+    position: relative;
+    left: 160px;
+    top: 187px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.startHidden {
+    display: none;
+}
+
+.btnMainMenu {
+    margin: 1vh 0px;
+    padding: 10px 10px;
+}
+
+.flashCard {
+    white-space: pre-wrap;
+    height: 20vh;
+    width: 500px;
+    display: inline-block;
+    font-size: 0.8em;
+/*    letter-spacing: 5px;*/
+/*    text-align: center;*/
+}
